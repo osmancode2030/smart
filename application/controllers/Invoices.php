@@ -208,12 +208,12 @@ class Invoices extends MY_Controller
             }
  
             
-            if($this->ion_auth->in_group(array("Members"))){
-                $this->session->set_flashdata('message', lang("access_denied")); 
-            }else{
-                $this->session->set_flashdata('success_message', lang("invoice_add_success"));
-            } 
-
+            // if($this->ion_auth->in_group(array("Members"))){
+            //     $this->session->set_flashdata('message', lang("access_denied")); 
+            // }else{
+            // } 
+            
+            $this->session->set_flashdata('success_message', lang("invoice_add_success"));
             redirect("/invoices/open/".$invoice_id, 'refresh');
         }
         else

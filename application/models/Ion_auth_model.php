@@ -331,7 +331,7 @@ class Ion_auth_model extends CI_Model
 			return FALSE;
 		}
 
-		// sha1
+		// sha1 
 		if ($this->store_salt)
 		{
 			$db_password = sha1($password . $hash_password_db->salt);

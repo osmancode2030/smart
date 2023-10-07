@@ -46,7 +46,7 @@ $invoices_table = "invoices_table";
         <div class="btn-group actions-list tip" title="<?php echo lang("actions"); ?>">
             <a class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><i class="fa fa-link"></i><span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right">
-                <?php if (!$this->ion_auth->in_group(array("customer", "supplier"))): ?>
+                <?php if (!$this->ion_auth->in_group(array("customer", "supplier", "Members"))): ?>
                 <li><a href="#" class="dropdown-item disabled btn-select-multi delete_selected"><i class="fa fa-trash"></i><?php echo lang("delete") ?></a></li>
                 <li class="dropdown-divider"></li>
                 <?php endif ?>

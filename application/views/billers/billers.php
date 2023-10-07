@@ -20,12 +20,14 @@ $cf = $this->settings_model->SYS_Settings;
 		<div class="btn-group columns-list tip" title="<?php echo lang("shown_columns"); ?>">
 			<a class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><i class="fa fa-columns"></i><span class="caret"></span></a>
 		</div>
+        <?php if (!$this->ion_auth->in_group(array("Members"))): ?>
         <div class="btn-group actions-list tip" title="<?php echo lang("actions"); ?>">
             <a class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><i class="fa fa-link"></i><span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right">
                 <li><a href="#" class="dropdown-item disabled btn-select-multi delete_selected"><i class="fa fa-trash"></i><?php echo lang("delete") ?></a></li>
             </ul>
         </div>
+        <?php endif; ?>
 	</div>
 </ol>
 <div class="container-fluid">
